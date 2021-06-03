@@ -8,8 +8,7 @@ use App\Models\MemberModel;
 
 
 
-
-class Members extends BaseController
+class Member extends BaseController
 {
 
 
@@ -17,6 +16,10 @@ class Members extends BaseController
 
 	protected $modelName = 'App\Models\MemberModel';
     protected $format    = 'json'; //Permet de définir automatiquement le MIME type retourné
+
+
+
+
 
 	/**
 	 * Present a view of resource objects
@@ -62,7 +65,10 @@ class Members extends BaseController
 	 */
 	public function create()
 	{
-		//
+		$memberModel = new MemberModel();
+		$members = $memberModel->insert($this->request->getPost());
+
+		return $this->respondCreated($members);
 	}
 
 	/**

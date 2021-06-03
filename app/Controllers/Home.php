@@ -6,7 +6,7 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		exit('nothing to see here');
+		exit('nothing to see heree');
 	}
 
 }

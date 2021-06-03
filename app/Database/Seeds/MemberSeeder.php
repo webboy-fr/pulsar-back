@@ -12,10 +12,13 @@ class MemberSeeder extends Seeder
 
 
                 //static::faker->create('fr_FR');
+                for($i=0; $i<5; $i++){
+                        $model->insert([
+                                'firstname'      => static::faker()->name,
+                                'lastname'      => static::faker()->name                        
+                        ]);
+                }
 
-                $model->insert([
-                        'firstname'      => static::faker()->name,
-                        'lastname'      => static::faker()->name                        
-                ]);
+                
         }
 }

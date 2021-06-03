@@ -28,19 +28,19 @@ $routes->setAutoRoute(true);
 
 
 //CORS
-header('Access-Control-Allow-Origin: '.env('app.client')); //On autorise l'accès que au serveur du front
-header("Access-Control-Allow-Methods: HEAD, GET, POST, PUT, PATCH, DELETE, OPTIONS"); //On définit toutes les méthodes HTTP autorisées
-header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method,Access-Control-Request-Headers, Authorization");
-header('Content-Type: application/json');
+//header('Access-Control-Allow-Origin: '.env('app.client')); //On autorise l'accès que au serveur du front
+//header("Access-Control-Allow-Methods: HEAD, GET, POST, PUT, PATCH, DELETE, OPTIONS"); //On définit toutes les méthodes HTTP autorisées
+//header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method,Access-Control-Request-Headers, Authorization");
+//header('Content-Type: application/json');
 
 //PREFLIGHT CROSSDOMAIN
 //Les requetes CORS ont une première requete de test du navigateur, qui utilise la méthode HTTP OPTIONS
-if ($_SERVER['REQUEST_METHOD'] == "OPTIONS") {
+/*if ($_SERVER['REQUEST_METHOD'] == "OPTIONS") {
 	header('Access-Control-Allow-Origin: *'); //oops TODO
 	header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method,Access-Control-Request-Headers, Authorization");
 	header("HTTP/1.1 200 OK");
 	die();
-}
+}*/
 
 
 
