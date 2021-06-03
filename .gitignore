@@ -1,4 +1,5 @@
 system
+tests/_support
 
 #-------------------------
 # Operating Specific Junk Files
